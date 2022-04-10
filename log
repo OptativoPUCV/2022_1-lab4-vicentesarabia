@@ -602,3 +602,22 @@ hashmap.c:50:5: note: each undeclared identifier is reported only once for each 
 cc1: all warnings being treated as errors
 Compilation failed
 139cc89
+Sun Apr 10 23:39:13 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:14: error: ‘return’ with a value, in function returning void [-Werror]
+       return NULL;
+              ^~~~
+hashmap.c:42:6: note: declared here
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+hashmap.c:50:5: error: ‘table’ undeclared (first use in this function); did you mean ‘tanl’?
+     table->buckets=item;
+     ^~~~~
+     tanl
+hashmap.c:50:5: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+d9f4977
