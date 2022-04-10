@@ -621,3 +621,13 @@ hashmap.c:50:5: note: each undeclared identifier is reported only once for each 
 cc1: all warnings being treated as errors
 Compilation failed
 d9f4977
+Sun Apr 10 23:39:57 UTC 2022: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:17: error: incompatible types when assigning to type ‘Pair ** {aka struct Pair **}’ from type ‘Pair {aka struct Pair}’
+     map->buckets=item;
+                 ^
+Compilation failed
+60401a1
