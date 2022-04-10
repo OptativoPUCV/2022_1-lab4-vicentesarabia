@@ -40,7 +40,6 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-    
   size_t index=hash(key,map->capacity);
   if(map->buckets[index]==NULL && map->buckets[index]->key==NULL)
   {
@@ -51,7 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   }
   while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
   {
-    if(is_equal(key,map->buckets[index]->key )==0){
+    if(is_equal(key,map->buckets[index]->key)==1){
         map->buckets[index]->value=value;
     }
     index++;
