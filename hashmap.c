@@ -60,8 +60,9 @@ HashMap * createMap(long capacity) {
     }
     mapa->size=0;
     mapa->capacity=capacity;
+    mapa->current=-1;
     mapa->buckets=(Pair**)calloc(mapa->capacity,sizeof(Pair*));
-    if(!mapa->buckets)
+    if(mapa->buckets==NULL)
     {
         mapa = NULL;
         return NULL;
