@@ -332,3 +332,9 @@ hashmap.c:63:5: error: expected ‘;’ before ‘mapa’
      ^~~~
 Compilation failed
 160bd1a
+Sun Apr 10 21:40:43 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+bfdcfa7
