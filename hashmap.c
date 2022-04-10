@@ -52,10 +52,18 @@ void insertMap(HashMap * map, char * key, void * value) {
   }
   else
   {
+    while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
+    {
     if(is_equal(key,map->buckets[index]->key)==1)
     {
       strcpy(map->buckets[index]->value,value);
       return;
+    }
+    index++;
+    index%=map->capacity;
+    if(index>=map->capacity)
+    {
+       index=0; 
     }
   }
 }
