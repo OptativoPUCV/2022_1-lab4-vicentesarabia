@@ -135,3 +135,186 @@ test.c:442:17: error: passing argument 1 to restrict-qualified parameter aliases
 cc1.exe: all warnings being treated as errors
 Compilation failed
 83ac00f
+Sun Apr 10 21:07:36 UTC 2022: 
+test.c: In function ‘initializeMap’:
+test.c:53:20: error: implicit declaration of function ‘_strdup’; did you mean ‘strdup’? [-Werror=implicit-function-declaration]
+         createPair(_strdup(words[i]),_strdup(msg));
+                    ^~~~~~~
+                    strdup
+test.c:53:20: error: passing argument 1 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+In file included from test.c:4:0:
+hashmap.c:19:8: note: expected ‘char *’ but argument is of type ‘int’
+ Pair * createPair( char * key,  void * value) {
+        ^~~~~~~~~~
+test.c:53:38: error: passing argument 2 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+         createPair(_strdup(words[i]),_strdup(msg));
+                                      ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:19:8: note: expected ‘void *’ but argument is of type ‘int’
+ Pair * createPair( char * key,  void * value) {
+        ^~~~~~~~~~
+test.c: In function ‘hash_test3’:
+test.c:126:13: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if(hash(_strdup("hola"),10)!=hash(_strdup("hola"),10)) printf("error: valor diferente para misma clave!\n");
+             ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:26:6: note: expected ‘char *’ but argument is of type ‘int’
+ long hash( char * key, long capacity) {
+      ^~~~
+test.c:126:39: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if(hash(_strdup("hola"),10)!=hash(_strdup("hola"),10)) printf("error: valor diferente para misma clave!\n");
+                                       ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:26:6: note: expected ‘char *’ but argument is of type ‘int’
+ long hash( char * key, long capacity) {
+      ^~~~
+test.c:127:13: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if(hash(_strdup("chao"),10)!=hash(_strdup("chao"),10)) printf("error: valor diferente para misma clave!\n");
+             ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:26:6: note: expected ‘char *’ but argument is of type ‘int’
+ long hash( char * key, long capacity) {
+      ^~~~
+test.c:127:39: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if(hash(_strdup("chao"),10)!=hash(_strdup("chao"),10)) printf("error: valor diferente para misma clave!\n");
+                                       ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:26:6: note: expected ‘char *’ but argument is of type ‘int’
+ long hash( char * key, long capacity) {
+      ^~~~
+test.c:128:13: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if(hash(_strdup("casa"),10)!=hash(_strdup("casa"),10)) printf("error: valor diferente para misma clave!\n");
+             ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:26:6: note: expected ‘char *’ but argument is of type ‘int’
+ long hash( char * key, long capacity) {
+      ^~~~
+test.c:128:39: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Werror=int-conversion]
+     if(hash(_strdup("casa"),10)!=hash(_strdup("casa"),10)) printf("error: valor diferente para misma clave!\n");
+                                       ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:26:6: note: expected ‘char *’ but argument is of type ‘int’
+ long hash( char * key, long capacity) {
+      ^~~~
+test.c: In function ‘insert_test1’:
+test.c:141:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup(":key"),_strdup("value"));
+                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘char *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c:141:36: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup(":key"),_strdup("value"));
+                                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘void *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c: In function ‘insert_test2’:
+test.c:171:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("case"),_strdup("repetido"));
+                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘char *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c:171:36: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("case"),_strdup("repetido"));
+                                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘void *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c: In function ‘insert_test3’:
+test.c:182:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("key"),_strdup("value"));
+                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘char *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c:182:35: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("key"),_strdup("value"));
+                                   ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘void *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c: In function ‘insert_test4’:
+test.c:195:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("key"),_strdup("value"));
+                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘char *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c:195:35: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("key"),_strdup("value"));
+                                   ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘void *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c:205:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("holi"),_strdup("value"));
+                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘char *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c:205:36: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("holi"),_strdup("value"));
+                                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘void *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c: In function ‘insert_test5’:
+test.c:222:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("key"),_strdup("value"));
+                    ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘char *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c:222:35: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+     insertMap(map, _strdup("key"),_strdup("value"));
+                                   ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:42:6: note: expected ‘void *’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+test.c: In function ‘search_test2’:
+test.c:259:32: error: passing argument 1 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+                                ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:19:8: note: expected ‘char *’ but argument is of type ‘int’
+ Pair * createPair( char * key,  void * value) {
+        ^~~~~~~~~~
+test.c:259:47: error: passing argument 2 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+                                               ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:19:8: note: expected ‘void *’ but argument is of type ‘int’
+ Pair * createPair( char * key,  void * value) {
+        ^~~~~~~~~~
+test.c: In function ‘erase_test2’:
+test.c:317:32: error: passing argument 1 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+                                ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:19:8: note: expected ‘char *’ but argument is of type ‘int’
+ Pair * createPair( char * key,  void * value) {
+        ^~~~~~~~~~
+test.c:317:47: error: passing argument 2 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+                                               ^~~~~~~
+In file included from test.c:4:0:
+hashmap.c:19:8: note: expected ‘void *’ but argument is of type ‘int’
+ Pair * createPair( char * key,  void * value) {
+        ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9a03f64
