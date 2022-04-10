@@ -641,3 +641,13 @@ hashmap.c:50:24: error: incompatible types when assigning to type ‘Pair * {aka
                         ^
 Compilation failed
 9cec5e9
+Sun Apr 10 23:41:01 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:16: error: incompatible types when initializing type ‘Pair * {aka struct Pair *}’ using type ‘Pair {aka struct Pair}’
+   Pair* item = * createPair(key,value);
+                ^
+Compilation failed
+ae64f93
