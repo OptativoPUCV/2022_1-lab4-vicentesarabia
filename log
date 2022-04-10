@@ -380,3 +380,21 @@ hashmap.c:42:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 1e5ed37
+Sun Apr 10 22:21:10 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:42: error: ‘*(map->buckets + (sizetype)(index * 8))’ is a pointer; did you mean to use ‘->’?
+       if(is_equal(key,map->buckets[index].key )==0){
+                                          ^
+                                          ->
+hashmap.c:49:35: error: ‘return’ with a value, in function returning void [-Werror]
+         return map->buckets[index]->key;
+                ~~~~~~~~~~~~~~~~~~~^~~~~
+hashmap.c:42:6: note: declared here
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c6a597a

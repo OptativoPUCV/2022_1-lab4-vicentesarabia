@@ -43,10 +43,10 @@ void insertMap(HashMap * map, char * key, void * value) {
     
   size_t index=hash(key,map->capacity);
 
-  while(map->buckets[index].key != NULL)
+  while(map->buckets[index]->key != NULL)
     {
       if(is_equal(key,map->buckets[index].key )==0){
-        return map->buckets[index].key;
+        return map->buckets[index]->key;
       }
     }
   index++;
