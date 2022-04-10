@@ -474,3 +474,8 @@ hashmap.c:49:28: error: ‘*(map->buckets + (sizetype)(index * 8))’ is a point
                             ->
 Compilation failed
 42c95c4
+Sun Apr 10 22:35:18 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+49ed2c2
