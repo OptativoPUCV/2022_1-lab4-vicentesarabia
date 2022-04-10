@@ -554,3 +554,29 @@ hashmap.c:53:3: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 e7e0cd9
+Sun Apr 10 23:38:27 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:13: error: invalid initializer
+   Pair item=createPair(key,value);
+             ^~~~~~~~~~
+hashmap.c:44:13: error: implicit declaration of function ‘has’; did you mean ‘hash’? [-Werror=implicit-function-declaration]
+   int index=has(key,map->capacity);
+             ^~~
+             hash
+hashmap.c:48:14: error: ‘return’ with a value, in function returning void [-Werror]
+       return NULL;
+              ^~~~
+hashmap.c:42:6: note: declared here
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+hashmap.c:50:5: error: ‘table’ undeclared (first use in this function); did you mean ‘tanl’?
+     table->buckets=item;
+     ^~~~~
+     tanl
+hashmap.c:50:5: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+ae4a4b2
