@@ -514,3 +514,43 @@ Sun Apr 10 23:22:02 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 bb84c8a
+Sun Apr 10 23:38:19 UTC 2022: 
+ hashmap.c | 26 ++++++++++++--------------
+ 1 file changed, 12 insertions(+), 14 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:13: error: invalid initializer
+   Pair item=createPair(key,value);
+             ^~~~~~~~~~
+hashmap.c:44:13: error: implicit declaration of function ‘has’; did you mean ‘hash’? [-Werror=implicit-function-declaration]
+   int index=has(key,map->capacity);
+             ^~~
+             hash
+hashmap.c:45:33: error: expected ‘)’ before ‘]’ token
+   if(map->buckets[index] == NULL]){
+                                 ^
+hashmap.c:45:33: error: expected statement before ‘]’ token
+hashmap.c:45:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   if(map->buckets[index] == NULL]){
+   ^~
+hashmap.c:45:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if(map->buckets[index] == NULL]){
+                                  ^
+hashmap.c:45:34: error: expected statement before ‘)’ token
+hashmap.c:48:14: error: ‘return’ with a value, in function returning void [-Werror]
+       return NULL;
+              ^~~~
+hashmap.c:42:6: note: declared here
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+hashmap.c:50:5: error: ‘table’ undeclared (first use in this function); did you mean ‘tanl’?
+     table->buckets=item;
+     ^~~~~
+     tanl
+hashmap.c:50:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:53:3: error: ‘else’ without a previous ‘if’
+   else
+   ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e7e0cd9
