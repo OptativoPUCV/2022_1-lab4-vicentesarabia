@@ -44,8 +44,8 @@ void insertMap(HashMap * map, char * key, void * value) {
   size_t index=hash(key,map->capacity);
   if(map->buckets[index]==NULL && map->buckets[index]->key==NULL)
   {
-    map->buckets[index]->key=key
-    map->buckets[index]->value=value
+    map->buckets[index]->key=key;
+    map->buckets[index]->value=value;
     index++;
     index%=map->capacity;
   }
