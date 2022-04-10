@@ -52,13 +52,15 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-    HashMap *mapa=(HashMap*)malloc(sizeof(HashMap));
-    if(!mapa)
+    HashMap *mapa=malloc(sizeof(HashMap));
+    if(mapa== NULL)
     {
         printf("no hay suficiente memoria");
         return NULL;
     }
-    mapa->buckets=(Pair**)calloc(capacity,sizeof(Pair*));
+    mapa->size=0;
+    mapa->capacity=capacity
+    mapa->buckets=(Pair**)calloc(mapa->capacity,sizeof(Pair*));
     if(!mapa->buckets)
     {
         mapa = NULL;

@@ -322,3 +322,13 @@ Sun Apr 10 21:36:26 UTC 2022:
  tests:  0|6
 total_score: 0/70
 a7fc632
+Sun Apr 10 21:40:35 UTC 2022: 
+ hashmap.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:63:5: error: expected ‘;’ before ‘mapa’
+     mapa->buckets=(Pair**)calloc(mapa->capacity,sizeof(Pair*));
+     ^~~~
+Compilation failed
+160bd1a
