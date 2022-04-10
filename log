@@ -463,3 +463,14 @@ Sun Apr 10 22:34:30 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 57f07c8
+Sun Apr 10 22:35:11 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:49:28: error: ‘*(map->buckets + (sizetype)(index * 8))’ is a pointer; did you mean to use ‘->’?
+         map->buckets[index].value=value;
+                            ^
+                            ->
+Compilation failed
+42c95c4
