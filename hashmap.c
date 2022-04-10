@@ -48,6 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     if(is_equal(key,map->buckets[index]->key )==0){
         map->buckets[index]->value=value;
     }
+    index++;
     index%=map->capacity;
     if(index>=map->capacity)
     {
