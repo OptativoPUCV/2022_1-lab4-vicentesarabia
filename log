@@ -318,3 +318,7 @@ hashmap.c:19:8: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 9a03f64
+Sun Apr 10 21:36:26 UTC 2022: 
+ tests:  0|6
+total_score: 0/70
+a7fc632
