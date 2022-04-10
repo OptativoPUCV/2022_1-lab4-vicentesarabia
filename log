@@ -344,3 +344,13 @@ Sun Apr 10 21:50:07 UTC 2022:
  tests:  1|5
 total_score: 10/70
 ba0f55f
+Sun Apr 10 22:20:41 UTC 2022: 
+ hashmap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:3: error: expected ‘,’ or ‘;’ before ‘while’
+   while(map->buckets[index].key != NULL)
+   ^~~~~
+Compilation failed
+44a0dbe
