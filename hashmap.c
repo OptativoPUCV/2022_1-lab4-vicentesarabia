@@ -40,7 +40,7 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-
+    
 
 }
 
@@ -55,13 +55,12 @@ HashMap * createMap(long capacity) {
     HashMap *mapa=(HashMap*)malloc(sizeof(HashMap));
     if(!mapa)
     {
-        printf("non hay suficiente memoria");
+        printf("no hay suficiente memoria");
         return NULL;
     }
     mapa->buckets=(Pair**)calloc(capacity,sizeof(Pair*));
     if(!mapa->buckets)
     {
-        free(mapa);
         mapa = NULL;
         return NULL;
     }
