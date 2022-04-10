@@ -494,3 +494,13 @@ Sun Apr 10 22:43:01 UTC 2022:
  1 file changed, 1 insertion(+)
  tests:  0|0
 70cfcca
+Sun Apr 10 23:01:03 UTC 2022: 
+ hashmap.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:5: error: expected ‘;’ before ‘map’
+     map->buckets[index]->value=value
+     ^~~
+Compilation failed
+c430607
