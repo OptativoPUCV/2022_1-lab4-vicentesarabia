@@ -444,3 +444,17 @@ hashmap.c:42:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 5c261a2
+Sun Apr 10 22:25:06 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:49:35: error: ‘return’ with a value, in function returning void [-Werror]
+         return map->buckets[index]->value;
+                ~~~~~~~~~~~~~~~~~~~^~~~~~~
+hashmap.c:42:6: note: declared here
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7269c47
