@@ -111,7 +111,8 @@ HashMap * createMap(long capacity) {
     return mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
+void eraseMap(HashMap * map,  char * key) {   
+  int index=hash(key,map->capacity);
   while(map->buckets[index]!=NULL)
     {
       if(is_equal(map->buckets[index]->key,key)==1)
