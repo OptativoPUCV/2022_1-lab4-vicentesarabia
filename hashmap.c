@@ -112,6 +112,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       if(is_equal(map->buckets[index]->key,key)==1)return map->buckets[index]->value;
       index++;
       index%=map->capacity;
+      printf("!");
     }
 
   return NULL;
