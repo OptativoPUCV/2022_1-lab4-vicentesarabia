@@ -160,6 +160,4 @@ Pair * nextMap(HashMap * map) {
   if(indi==0)return NULL;
   map->current=indi;
   return map->buckets[indi];
-  
-  return NULL;
 }
