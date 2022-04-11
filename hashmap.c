@@ -141,6 +141,15 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+  int indi = map->current+1;
+  if(indi==map->capacity-1)
+  {
     return NULL;
+  }
+  while(map->buckets[indi]->key==NULL || map->buckets[indi]==NULL )
+    {
+      indi(indi+1)%map->capacity;
+    }
+  map->curretn=indi;
+  return map->bucket[indi];
 }
