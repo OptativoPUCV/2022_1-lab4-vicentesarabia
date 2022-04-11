@@ -114,10 +114,10 @@ Pair * searchMap(HashMap * map,  char * key) {
 Pair * firstMap(HashMap * map) {
   int inde=0;
   while(map->buckets[inde]==NULL || map->buckets[inde]->key == NULL){
-    inde=(inde+1)%map->capacity
+    inde=(inde+1)%map->capacity;
   }
   map->current=inde;
-  return map->buckets[inde]
+  return map->buckets[inde];
   
 }
 
