@@ -1236,3 +1236,17 @@ hashmap.c:173:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 072afa8
+Mon Apr 11 01:26:41 UTC 2022: 
+ hashmap.c | 18 ++----------------
+ 1 file changed, 2 insertions(+), 16 deletions(-)
+In file included from test.c:4:0:
+hashmap.c:116:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+hashmap.c: In function ‘nextMap’:
+hashmap.c:159:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+7fac024
