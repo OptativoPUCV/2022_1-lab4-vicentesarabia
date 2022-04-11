@@ -43,7 +43,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   
   Pair* item = createPair(key,value);
   int index=hash(key,map->capacity);
-  if(map->buckets[index]==NULL)
+  if(map->buckets[index]==NULL && map->buckets[index]->key==NULL )
   {
     /*
     if(map->capacity==map->size){
@@ -69,7 +69,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       //}
       
     } 
-    if(map->buckets[index]==NULL)
+    if(map->buckets[index]==NULL && map->buckets[index]->key==NULL )
     {
       /*
       if(map->capacity==map->size){
