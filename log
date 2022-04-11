@@ -1163,3 +1163,34 @@ hashmap.c:165:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 a7c2a1f
+Mon Apr 11 01:23:49 UTC 2022: 
+ hashmap.c | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:115:21: error: array subscript is not an integer
+   while(map->buckets[index]!=NULL)
+                     ^
+hashmap.c:117:31: error: array subscript is not an integer
+       if(is_equal(map->buckets[index]->key,key)==1)
+                               ^
+hashmap.c:119:21: error: array subscript is not an integer
+         map->buckets[index]->key=NULL;
+                     ^
+hashmap.c:122:12: error: lvalue required as increment operand
+       index++;
+            ^~
+hashmap.c:123:12: error: lvalue required as left operand of assignment
+       index%=map->capacity;
+            ^~
+hashmap.c: At top level:
+hashmap.c:129:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+hashmap.c: In function ‘nextMap’:
+hashmap.c:172:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+c57f653

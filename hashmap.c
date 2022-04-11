@@ -112,11 +112,18 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-  int index;
-  index=searchMap(map,key);
-  map->buckets[index]->key=NULL;
-  map->size--;
-  return map->buckets[index];
+  while(map->buckets[index]!=NULL)
+    {
+      if(is_equal(map->buckets[index]->key,key)==1)
+      {
+        map->buckets[index]->key=NULL;
+        map->size--;
+      }
+      index++;
+      index%=map->capacity;
+    }
+}
+  
     
 
 }
