@@ -116,7 +116,7 @@ void eraseMap(HashMap * map,  char * key) {
   index=searchMap(map,key);
   map->buckets[index]->key=NULL;
   map->size--;
-  
+  return map->buckets[index];
     
 
 }

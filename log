@@ -1142,3 +1142,24 @@ hashmap.c:165:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 c9e40f0
+Mon Apr 11 01:22:34 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:116:8: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   index=searchMap(map,key);
+        ^
+hashmap.c:119:22: error: ‘return’ with a value, in function returning void [-Werror]
+   return map->buckets[index];
+          ~~~~~~~~~~~~^~~~~~~
+hashmap.c:114:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:165:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+a7c2a1f
