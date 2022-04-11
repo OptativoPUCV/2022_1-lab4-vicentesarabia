@@ -109,10 +109,9 @@ Pair * searchMap(HashMap * map,  char * key) {
   int index=hash(key,map->capacity);
   while(map->buckets[index]!=NULL)
     {
-      if(is_equal(map->buckets[index]->key,key)==1)return map->buckets[index]->value;
+      if(strcpy(map->buckets[index]->key,key)==0)return map->buckets[index]->value;
       index++;
       index%=map->capacity;
-      printf("!");
     }
 
   return NULL;
