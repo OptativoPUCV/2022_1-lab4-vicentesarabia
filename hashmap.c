@@ -93,7 +93,7 @@ void enlarge(HashMap * map) {
   int i=0;
   Pair** aux=map->buckets;
   mo=map->capacity*2;
-  HashMap vari =malloc(sizeof(HashMap));
+  HashMap *vari = malloc(sizeof(HashMap));
   vari->size=0;
   vari->capacity=mo;
   vari->currrent=-1;
