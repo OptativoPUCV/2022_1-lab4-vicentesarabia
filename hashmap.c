@@ -59,7 +59,6 @@ void insertMap(HashMap * map, char * key, void * value) {
   {
     if(is_equal(key,map->buckets[index]->key)==1)
     {
-      strcpy(map->buckets[index]->value,value);
       return;
     }
     index++;
