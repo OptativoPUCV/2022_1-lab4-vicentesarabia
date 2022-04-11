@@ -102,7 +102,7 @@ void enlarge(HashMap * map) {
     {
       if(map->buckets = (Pair**)calloc(mo,sizeof(Pair*)))
       {
-        insertMap(map->buckets[i]!NULL && map->buckets[i]->key!=NULL){
+        insertMap(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
           vari->size++;
         }
       }

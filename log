@@ -1557,3 +1557,32 @@ hashmap.c:94:10: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 2b2a2bf
+Mon Apr 11 02:42:29 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:103:10: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+       if(map->buckets = (Pair**)calloc(mo,sizeof(Pair*)))
+          ^~~
+hashmap.c:105:19: error: passing argument 1 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+         insertMap(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
+                   ^~~
+hashmap.c:42:6: note: expected ‘HashMap * {aka struct HashMap *}’ but argument is of type ‘int’
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+hashmap.c:105:9: error: too few arguments to function ‘insertMap’
+         insertMap(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
+         ^~~~~~~~~
+hashmap.c:42:6: note: declared here
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+hashmap.c:105:71: error: expected ‘;’ before ‘{’ token
+         insertMap(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
+                                                                       ^
+hashmap.c:94:10: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair** aux=map->buckets;
+          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+038e9b7
