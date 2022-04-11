@@ -847,3 +847,13 @@ hashmap.c:114:28: error: ‘Pair {aka struct Pair}’ has no member named ‘cur
                             ^~
 Compilation failed
 627975a
+Mon Apr 11 00:37:11 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:114:28: error: ‘Pair {aka struct Pair}’ has no member named ‘current’
+         map->buckets[index]->current=0;
+                            ^~
+Compilation failed
+cb84a33
