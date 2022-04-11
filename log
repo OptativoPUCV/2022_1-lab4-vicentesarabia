@@ -993,3 +993,16 @@ hashmap.c:144:7: note: declared here
        ^~~~
 Compilation failed
 413d101
+Mon Apr 11 01:07:01 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:152:7: error: called object ‘indi’ is not a function or function pointer
+       indi(indi+1)%map->capacity;
+       ^~~~
+hashmap.c:144:7: note: declared here
+   int indi;
+       ^~~~
+Compilation failed
+82a34ee
