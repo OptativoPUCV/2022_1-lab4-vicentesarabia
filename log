@@ -1074,3 +1074,24 @@ hashmap.c:158:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 94a7587
+Mon Apr 11 01:14:56 UTC 2022: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:32: error: expected ‘)’ before ‘{’ token
+     if(map->capacity==map->size{
+                                ^
+hashmap.c:53:3: error: expected expression before ‘}’ token
+   }
+   ^
+hashmap.c:44:9: error: unused variable ‘item’ [-Werror=unused-variable]
+   Pair* item = createPair(key,value);
+         ^~~~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:160:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+79d9c77
