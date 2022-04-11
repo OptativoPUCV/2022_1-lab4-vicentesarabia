@@ -113,7 +113,7 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {    
   int index;
-  index=searchMap(map,key)
+  index=searchMap(map,key);
   map->buckets[index]->key=NULL;
   map->size--;
   
