@@ -159,7 +159,7 @@ Pair * nextMap(HashMap * map) {
   }
   while(map->buckets[indi]->key==NULL || map->buckets[indi]==NULL )
     {
-      indi(indi+1)%map->capacity;
+      indi=(indi+1)%map->capacity;
     }
   if(indi==0)return NULL;
   map->current=indi;
