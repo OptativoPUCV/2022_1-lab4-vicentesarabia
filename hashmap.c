@@ -150,14 +150,17 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
+  /*
   int indi;
   indi = map->current;
-  indi = (indi+1)%map->capacity;
-  while(map->buckets[indi]->key==NULL || map->buckets[indi]==NULL )
-    {
-      indi=(indi+1)%map->capacity;
-    }
-  if(indi==0)return NULL;
+  indi = (indi + 1) % map->capacity;
+  while(map->buckets[indi]==NULL || map->buckets[indi]->key==NULL)
+  {
+    indi=(indi + 1 )% map->capacity;
+  }
+  if (indi == 0) return NULL;
   map->current=indi;
   return map->buckets[indi];
+  */
+  return NULL;
 }
