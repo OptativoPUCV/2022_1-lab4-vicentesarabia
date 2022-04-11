@@ -96,7 +96,7 @@ void enlarge(HashMap * map) {
   HashMap *vari = malloc(sizeof(HashMap));
   vari->size=0;
   vari->capacity=mo;
-  vari->currrent=-1;
+  vari->current=-1;
   vari->buckets=(Pair**)calloc(mo,sizeof(Pair*));
   while (i<map->capacity)
     {
