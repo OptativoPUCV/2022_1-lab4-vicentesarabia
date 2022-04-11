@@ -42,44 +42,35 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
   Pair* item = createPair(key,value);
   int index=hash(key,map->capacity);
-  if(map->buckets[index] == NULL){
+  while(map->buckets[index]->key == NULL && map->buckets[index]==NULL)
+  {
     if(map->capacity==map->size)
     {
       return;
     }
     map->buckets[index]=item;
     map->size++;
-  }
-  else
-  {
-    while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
-    {
-      if(is_equal(key,map->buckets[index]->key)==1)
-      {
-        strcpy(map->buckets[index]->value,value);
-        return;
-      }
-      index++;
-      index%=map->capacity;
-      if(index>=map->capacity)
-      {
-         index=0; 
-      }
-    }  
-    while(map->buckets[index]->key == NULL && map->buckets[index]==NULL)
-    {
-      if(map->capacity==map->size)
-      {
-        return;
-      }
-      map->buckets[index]=item;
-      map->size++;
-      index++;
-      index%=map->capacity;
+    index++;
+    index%=map->capacity;
       
+  }
+  
+  while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
+  {
+    if(is_equal(key,map->buckets[index]->key)==1)
+    {
+      strcpy(map->buckets[index]->value,value);
+      return;
     }
-  } 
+    index++;
+    index%=map->capacity;
+    if(index>=map->capacity)
+    {
+        index=0; 
+    }
+  }  
 }
+
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
