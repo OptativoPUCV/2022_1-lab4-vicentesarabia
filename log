@@ -736,3 +736,43 @@ Mon Apr 11 00:14:29 UTC 2022:
  1 file changed, 1 deletion(-)
  tests:  0|0
 a94c6db
+Mon Apr 11 00:24:01 UTC 2022: 
+ hashmap.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:117:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+hashmap.c:121:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+test.c: In function ‘insertMap’:
+test.c:453:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:511:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+test.c:453:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:217:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+ int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+     ^~~~~~~~~~~~
+test.c:131:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+ void compare_test(){
+      ^~~~~~~~~~~~
+test.c:125:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+ void hash_test3(){ //no random
+      ^~~~~~~~~~
+test.c:111:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+ void hash_test2(){ // colisiones
+      ^~~~~~~~~~
+test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+ void hash_test1(){ // posición válida
+      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7c32882
