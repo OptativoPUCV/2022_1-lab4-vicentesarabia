@@ -150,6 +150,6 @@ Pair * nextMap(HashMap * map) {
     {
       indi(indi+1)%map->capacity;
     }
-  map->curretn=indi;
-  return map->bucket[indi];
+  map->current=indi;
+  return map->buckets[indi];
 }
