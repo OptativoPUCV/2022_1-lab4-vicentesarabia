@@ -65,7 +65,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       {
          index=0; 
       }
-  }
+    }  
     while(map->buckets[index]->key == NULL && map->buckets[index]==NULL)
     {
       if(map->capacity==map->size)
@@ -78,6 +78,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       index%=map->capacity;
       
     }
+  } 
 }
 
 void enlarge(HashMap * map) {
