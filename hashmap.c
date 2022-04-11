@@ -54,18 +54,30 @@ void insertMap(HashMap * map, char * key, void * value) {
   {
     while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
     {
-    if(is_equal(key,map->buckets[index]->key)==1)
-    {
-      strcpy(map->buckets[index]->value,value);
-      return;
-    }
-    index++;
-    index%=map->capacity;
-    if(index>=map->capacity)
-    {
-       index=0; 
-    }
+      if(is_equal(key,map->buckets[index]->key)==1)
+      {
+        strcpy(map->buckets[index]->value,value);
+        return;
+      }
+      index++;
+      index%=map->capacity;
+      if(index>=map->capacity)
+      {
+         index=0; 
+      }
   }
+    while(map->buckets[index]->key == NULL && map->buckets[index]==NULL)
+    {
+      if(map->capacity==map->size)
+      {
+        return;
+      }
+      map->buckets[index]=item;
+      map->size++;
+      index++;
+      index%=map->capacity;
+      
+    }
 }
 
 void enlarge(HashMap * map) {
