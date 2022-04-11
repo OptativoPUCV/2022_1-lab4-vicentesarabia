@@ -69,9 +69,11 @@ void insertMap(HashMap * map, char * key, void * value) {
     } 
     if(map->buckets[index]==NULL)
     {
+      /*
       if(map->capacity==map->size){
         return;  
       }
+      */
       map->buckets[index]=item;
       map->size++;
     }
