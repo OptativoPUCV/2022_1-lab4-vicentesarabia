@@ -141,6 +141,7 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
+  /*
   int indi;
   indi = map->current+1;
   if(indi==map->capacity-1)
@@ -153,4 +154,5 @@ Pair * nextMap(HashMap * map) {
     }
   map->current=indi;
   return map->buckets[indi];
+  */
 }
