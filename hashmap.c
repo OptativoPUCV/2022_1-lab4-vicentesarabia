@@ -51,9 +51,9 @@ void insertMap(HashMap * map, char * key, void * value) {
     map->buckets[index]=item;
     map->size++;
   }
- 
-  
-  while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
+  else
+  {
+     while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
   {
     if(is_equal(key,map->buckets[index]->key)==1 && map->buckets[index]!=NULL)
     {
@@ -68,6 +68,10 @@ void insertMap(HashMap * map, char * key, void * value) {
         index=0; 
     }
   } 
+  }
+    
+  
+ 
  
   
 }
@@ -159,4 +163,5 @@ Pair * nextMap(HashMap * map) {
   map->current=indi;
   return map->buckets[indi];
   */
+  return NULL;
 }
