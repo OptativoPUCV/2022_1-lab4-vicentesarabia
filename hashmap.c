@@ -40,7 +40,7 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-  
+  /*
   Pair* item = createPair(key,value);
   int index=hash(key,map->capacity);
  
@@ -78,7 +78,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
   }  
  
-  
+  */
 }
 
 
@@ -120,7 +120,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     {
       if(is_equal(map->buckets[index]->key,key)==1)
       {
-        map->current++;
+        map->current=index;
         return map->buckets[index];
       }
       index++;
