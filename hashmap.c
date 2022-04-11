@@ -111,7 +111,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     {
       if(is_equal(map->buckets[index]->key,key)==1)
       {
-        
+        map->buckets[index]->curretn=0;
         return map->buckets[index];
       }
       index++;

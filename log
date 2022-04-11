@@ -837,3 +837,13 @@ Mon Apr 11 00:36:38 UTC 2022:
  tests:  4|5
 total_score: 10/70
 fa4e80a
+Mon Apr 11 00:37:01 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:114:28: error: ‘Pair {aka struct Pair}’ has no member named ‘curretn’
+         map->buckets[index]->curretn=0;
+                            ^~
+Compilation failed
+627975a
