@@ -776,3 +776,16 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 7c32882
+Mon Apr 11 00:24:30 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:118:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+hashmap.c:122:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+Compilation failed
+b0f0f0c
