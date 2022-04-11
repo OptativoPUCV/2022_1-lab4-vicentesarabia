@@ -61,10 +61,10 @@ void insertMap(HashMap * map, char * key, void * value) {
       }
       index++;
       index%=map->capacity;
-      if(index>=map->capacity)
-      {
-        index=0; 
-      }
+      //if(index>=map->capacity)
+      //{
+        //index=0; 
+      //}
       
     } 
     if(map->buckets[index]==NULL)
