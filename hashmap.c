@@ -75,11 +75,7 @@ void insertMap(HashMap * map, char * key, void * value) {
         index=0; 
     }
   }  
-  if(map->buckets[index]==NULL)
-  {
-    map->buckets[index] = item;
-    map->size++;
-  }
+ 
   
 }
 
