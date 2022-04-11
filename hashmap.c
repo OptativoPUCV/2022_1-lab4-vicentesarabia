@@ -55,11 +55,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     index%=map->capacity;
       
   }
-  if(map->buckets[index]==NULL)
-  {
-    map->buckets[index] = item;
-    map->size++;
-  }
+
   
   while(map->buckets[index]->key != NULL && map->buckets[index]!=NULL)
   {
